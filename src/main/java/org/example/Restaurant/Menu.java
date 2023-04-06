@@ -8,9 +8,7 @@ public class Menu {
     private Date lastUpdated;
 
 
-    public ArrayList<MenuItem> getMenuItems() {
-        return menuItems;
-    }
+
     @Override
     public String toString() {
         StringBuilder appetizers = new StringBuilder();
@@ -35,10 +33,11 @@ public class Menu {
         }
 
 
-        return "THE GREAT NORTH CAFE\n" +
+        return "\n~THE NORTH SHORE CAFE~\n" +
         "\nAPPETIZERS\n" + appetizers.toString() + "\n" +
         "\nMAIN COURSES\n" + mainCourses.toString() + "\n" +
         "\nDESSERTS\n" + desserts.toString() + "\n";
+//        "+ \nMenu last updated: " +lastUpdated.toString();
 
     }
 
@@ -51,6 +50,10 @@ public class Menu {
     void removeItem(MenuItem item) {
         menuItems.remove(item);
         lastUpdated = new Date();
+    }
+
+    public Date getLastUpdated() {
+        return lastUpdated;
     }
 
 }
